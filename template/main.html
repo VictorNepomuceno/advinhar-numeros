@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jogo de advinhação de números</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: monospace;
+      font-size: 3rem;
+      color: #fff;
+      background-color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      align-items: center;
+    }
+
+    input {
+      text-align: center;
+      height: 4rem;
+      width: 10rem;
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      background-color: #fff;
+      border: none;
+      height: 3rem;
+      width: 6rem;
+      border-radius: 3rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+  </style>
+  <body>
+    <form action="/jogo" method="post">
+      <label for="numero">Tente advinhar o número</label>
+      <input type="text" name="numero" id="numero" />
+      <button type="submit">Confirmar</button>
+    </form>
+    <span>{{mensagem}}</span>
+    <span id="resultado"></span>
+  </body>
+</html>
